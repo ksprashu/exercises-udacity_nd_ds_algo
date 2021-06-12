@@ -72,9 +72,9 @@ node.next = loop_start
 small_loop = LinkedList([0])
 small_loop.head.next = small_loop.head
 
-print ("Pass" if iscircular(list_with_loop) else "Fail")                  # Pass
-print ("Pass" if iscircular(LinkedList([-4, 7, 2, 5, -1])) else "Fail")   # Fail
-print ("Pass" if iscircular(LinkedList([1])) else "Fail")                 # Fail
-print ("Pass" if iscircular(small_loop) else "Fail")                      # Pass
-print ("Pass" if iscircular(LinkedList([])) else "Fail")                  # Fail
+print ("expecting pass:", "Pass" if iscircular(list_with_loop) else "Fail")                  # Pass
+print ("expecting fail:", "Pass" if iscircular(LinkedList([-4, 7, 2, 5, -1])) else "Fail")   # Fail
+print ("expecting fail:", "Pass" if iscircular(LinkedList([1])) else "Fail")                 # Fail
+print ("expecting pass:", "Pass" if iscircular(small_loop) else "Fail")                      # Pass
+print ("expecting fail:", "Pass" if iscircular(LinkedList([])) else "Fail")                  # Fail
 

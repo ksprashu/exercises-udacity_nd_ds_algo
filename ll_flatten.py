@@ -114,7 +114,8 @@ solution = nested_linked_list.flatten() # <-- returns A LinkedList object
 expected_list = [1,2,3,4,5] # <-- Python list
 
 # Convert the "solution" into a Python list and compare with another Python list
-assert solution.to_list() == expected_list, f"list contents: {solution.to_list()}"
+assert solution.to_list() == expected_list, f"list contents: {solution.to_list()}" 
+print('assertion was successful')
 
 ''' Test merge() function'''
 linked_list = LinkedList(Node(1))
@@ -128,16 +129,18 @@ merged = merge(linked_list, second_linked_list)
 node = merged.head
 while node is not None:
     #This will print 1 2 3 4 5
-    print(node.value)
+    print(node.value, end=', ')
     node = node.next
+print()    
     
 # Lets make sure it works with a None list
 merged = merge(None, linked_list)
 node = merged.head
 while node is not None:
     #This will print 1 3 5
-    print(node.value)
+    print(node.value, end=', ')
     node = node.next
+print()
 
 ''' Test flatten() function'''
 # Create a nested linked list with one node. 
@@ -154,5 +157,6 @@ flattened = nested_linked_list.flatten()
 node = flattened.head
 while node is not None:
     #This will print 1 2 3 4 5
-    print(node.value)
+    print(node.value, end=', ')
     node = node.next    
+print()
